@@ -1,0 +1,12 @@
+name: veyramesh_workspace
+publish_to: none
+
+workspace:
+  - packages/veyra_lab
+  - apps/veyra_observatory
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dev_dependencies:
+  lints: ^6.0.0

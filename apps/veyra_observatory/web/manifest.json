@@ -1,0 +1,10 @@
+{
+  "name": "VeyraMesh Observatory",
+  "short_name": "VeyraMesh",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#060A12",
+  "theme_color": "#65D7FF",
+  "description": "Deterministic simulation research and education console",
+  "orientation": "landscape"
+}

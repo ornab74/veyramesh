@@ -1,0 +1,13 @@
+name: veyra_lab
+description: Clean-room deterministic simulation research runtime for reproducible studies, protocol graphs, chronicles, and comparative traces.
+version: 3.0.0
+repository: https://github.com/ornab74/veyramesh-observatory
+issue_tracker: https://github.com/ornab74/veyramesh-observatory/issues
+resolution: workspace
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.31.2

@@ -1,0 +1,25 @@
+name: VeyraMesh full run
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: flutter analyze
+      - run: dart test
+        working-directory: packages/veyra_lab
+      - run: flutter test
+        working-directory: apps/veyra_observatory
+      - run: flutter build web --release
+        working-directory: apps/veyra_observatory
+      - run: dart run tool/verify_transformative_use.dart
